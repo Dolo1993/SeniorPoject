@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUP</title>
+
+    <!-- Add your CSS stylesheets and links to external libraries here -->
+    <link rel="stylesheet" href="styles/home.css">
+
+    <!-- Add links to external libraries if needed -->
+    <!-- For example, Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- Add your JavaScript files and Vue.js integration here -->
+    <script src="path/to/your/vue.js"></script>
+    <script src="path/to/your/main.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Logo to the left of the navigation -->
+        <div class="logo">
+            <img src="images/logo.jpg" alt="SUP Logo">
+        </div> 
+        <div class="social-media">
+            <!-- Add social media links and icons -->
+            <a href="link-to-facebook" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="link-to-instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>   
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <!-- Regular navigation for larger screens -->
+            <ul>
+                <li><a href="#home">Home</a></li> 
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#forum">Forum</a></li> 
+                <li><a href="#member">Membership</a></li>
+                <li><a href="#about">About SUP</a></li> 
+                <li><a href="chair">SUP Chairs</a></li> 
+            </ul>
+
+            <!-- Dropdown select box for small screens -->
+            <select id="mobile-nav">
+                <option value="" selected disabled>Manu</option>
+                <option value="home">Home</option>
+                <option value="contact">Contact Us</option>
+                <option value="forum">Forum</option>
+                <option value="#member">Membership</option>
+                <option value="#about">About SUP</option>
+                <option value="#chairs">SUP Chair</option>
+            </select>
+        </nav>
+
+        <!-- Hero Image with Logo -->
+        <div class="hero">
+            <img src="images/hero-image.jpg" alt="SUP Hero Image">
+            <h1><span class="letter-S">s</span><span class="letter-U">u</span><span class="letter-P">p</span></h1>
+            <p>By The Masses, For The Masses, and Of The Masses</p>
+        </div>
+    </header>
+    <main>
+        <section id="announcements">
+            <a href="announcements_page.html">
+                <h2>Announcements</h2>
+                <!-- Add a dynamic section to display the latest announcements -->
+                <div id="announcements-container">
+                    <!-- Vue.js can be used to dynamically render announcements here -->
+                    <div v-for="announcement in announcements" :key="announcement.id">
+                        <a :href="'announcement_detail_page.html?id=' + announcement.id">
+                            <h3>{{ announcement.title }}</h3>
+                        </a>
+                        <p>{{ announcement.content }}</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+        
+        <section id="events">
+            <a href="events_page.html">
+                <h2>Upcoming Events</h2>
+                <!-- Add a dynamic section to showcase upcoming events -->
+                <div id="events-container">
+                    <!-- Vue.js can be used to dynamically render events here -->
+                    <div v-for="event in events" :key="event.id">
+                        <a :href="'event_detail_page.html?id=' + event.id">
+                            <h3>{{ event.title }}</h3>
+                        </a>
+                        <p>Date: {{ event.date }}, Time: {{ event.time }}</p>
+                        <p>{{ event.description }}</p>
+                    </div>
+                </div>
+            </a>
+        </section>
+        
+
+        <section id="forum">
+            <p>Are you a member? Join the <a href="link-to-facebook-group">Forum</a>.</p>
+        </section>
+
+        <section id="images">
+            <!--dynamic section to display images as cards -->
+            <div id="images-container">
+                <div class="image-card">
+                    <img src="images/image1.jpg" alt="Image 1">
+                    <p>Image 1 Description</p>
+                </div>
+                <div class="image-card">
+                    <img src="images/image2.jpg" alt="Image 2">
+                    <p>Image 2 Description</p>
+                </div> 
+                <div class="image-card">
+                    <img src="images/image3.jpg" alt="Image 2">
+                    <p>Image 2 Description</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-media">
+            <!-- Add social media links and icons -->
+            <a href="link-to-facebook" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="link-to-instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>   
+        </div>
+        <p>&copy; 2023 Vanguard Student Unification Party</p>
+    </footer> 
+    <script src="scripts/dropdown.js"></script>
+</body>
+
+</html>

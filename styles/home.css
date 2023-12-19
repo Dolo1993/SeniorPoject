@@ -1,0 +1,242 @@
+ /* default styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+} 
+
+.logo {
+    float: left; 
+    margin-bottom: 12px;
+}
+
+/* header */
+header {
+    background-color: #0F9D58;
+    color: #fff;
+    padding: 20px; 
+    text-align: center;
+}
+
+ /* Regular navigation styles */
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #351C15; 
+}
+
+/* Style for the dropdown select box */
+nav select {
+    display: none;
+    float: right;
+    margin: 10px;
+    padding: 5px;
+}
+/* hero section */
+.hero {
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: 400px; 
+    filter: brightness(0.9);
+    object-fit: cover;
+}
+
+.hero h1 { 
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 4.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-weight: bold;
+} 
+
+/* styles for the color of SUP */
+.hero h1 .letter-S {
+    color: khaki;  
+}
+
+.hero h1 .letter-U {
+    color: red;    
+}
+
+.hero h1 .letter-P {
+    color: green;  
+}
+
+.hero p { 
+    background-color: khaki; 
+    color: #000;
+    position: absolute;
+    top: 70%;
+    left: 50%; 
+    font-weight: bold;
+    transform: translate(-50%, -50%);
+}
+
+/* main section */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#announcements-container, #events-container, #images-container {
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+#announcements {  
+    border-radius: 3px; 
+    font-size: 12px;
+    float: right;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+} 
+
+#events { 
+    background-color: khaki;  
+    font-size: 12px;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+} 
+
+#forum p {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 10px 20px; 
+    background-color: rgba(240, 230, 140, 0.39); 
+    color: black; 
+    font-size: 16px;
+    font-weight: bold; 
+    border: 1px solid red; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+#forum p:hover {
+    background-color: #297fb931;  
+    color: red;
+}
+
+/* image card section */
+.image-card {
+    width: calc(33.3333% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+.image-card img {
+    width: 100%;
+    height: auto; 
+    border-radius: 8px 8px 0 0;
+    border: 1px solid red;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); 
+    
+}
+
+.image-card p {
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: left; 
+    padding: 40px 0;
+}
+/* social styles */
+.social-media a { 
+    float: right;
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    height: auto; 
+    margin-bottom: 5px;
+}
+
+#images-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-card {
+    width: calc(33.3333% - 20px);
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* responsive view */
+@media screen and (max-width: 768px) {
+    #images-container {
+        flex-direction: column;
+    }
+
+    .image-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+} 
+ 
+/*  media query to show the dropdown on small screens */
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: none;
+    }
+
+    nav select {
+        display: block;
+    }
+}
