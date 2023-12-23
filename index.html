@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUP</title>
 
-    <!-- Add your CSS stylesheets and links to external libraries here -->
+    <!-- CSS stylesheets -->
     <link rel="stylesheet" href="styles/home.css">
 
     <!-- Add links to external libraries if needed -->
@@ -20,12 +20,12 @@
 
 <body>
     <header>
-        <!-- Logo to the left of the navigation -->
+        <!-- Logo -->
         <div class="logo">
             <img src="images/logo.jpg" alt="SUP Logo">
         </div> 
         <div class="social-media">
-            <!-- Add social media links and icons -->
+            <!-- social media links and icons -->
             <a href="link-to-facebook" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="link-to-instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>   
         </div>
@@ -49,14 +49,14 @@
                 <option value="forum">Forum</option>
                 <option value="#member">Membership</option>
                 <option value="#about">About SUP</option>
-                <option value="#chairs">SUP Chair</option>
+                <option value="#chairs">SUP Chairs</option>
             </select>
         </nav> 
-        <audio id="background-music" src="audios/rudeboy.mp3" autoplay loop></audio> 
+        <!-- <audio id="background-music" src="audios/rudeboy.mp3" autoplay loop></audio>  -->
         <button id="startAudioButton">Start Audio</button>
         
 
-        <!-- Hero Image with Logo -->
+        <!-- Hero Image -->
         <div class="hero">
             <img src="images/hero-image.jpg" alt="SUP Hero Image">
             <h1><span class="letter-S">s</span><span class="letter-U">u</span><span class="letter-P">p</span></h1>
@@ -103,7 +103,6 @@
         </section>
 
         <section id="images">
-            <!--dynamic section to display images as cards -->
             <div id="images-container">
                 <div class="image-card">
                     <img src="images/image1.jpg" alt="Image 1">
@@ -115,15 +114,42 @@
                 </div> 
                 <div class="image-card">
                     <img src="images/image3.jpg" alt="Image 2">
-                    <p>Image 2 Description</p>
+                    <p>Image 3 Description</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </section> 
+        <!-- Text -->
+        <section id="text">
+            <div class="text-area]">
+                <h2>Explore the Beauty of SUP</h2>
+                <p>Immerse yourself in the captivating world of Stand-Up Paddleboarding (SUP). As you scroll through the stunning images of our community and events, take a moment to envision the serenity and excitement that awaits you. We believe in fostering a sense of unity and adventure, and SUP is the perfect platform to experience both.</p>
+                <p>Prepare to be amazed by the incredible moments captured during our SUP journeys. Whether it's the thrill of riding the waves or the camaraderie among our members, these videos encapsulate the essence of the SUP experience.</p>
+            </div>  
+        </section> 
 
+        <!-- Videos Section -->
+        <section id="videos">
+            <div id="videos-container">
+                <div class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vPRVCoCTp9U" frameborder="0" allowfullscreen></iframe>
+                    <p>Video 1 Description</p>
+                </div>
+                <div class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vPRVCoCTp9U" frameborder="0" allowfullscreen></iframe>
+                    <p>Video 2 Description</p>
+                </div>
+                <div class="video-card">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vPRVCoCTp9U" frameborder="0" allowfullscreen></iframe>
+                    <p>Video 3 Description</p>
+                </div> 
+                
+            </div>
+        </section>
+
+    </main>
     <footer>
         <div class="social-media">
-            <!-- Add social media links and icons -->
+            <!-- social media-->
             <a href="link-to-facebook" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
             <a href="link-to-instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>   
         </div>
@@ -132,5 +158,4 @@
     <script src="scripts/dropdown.js"></script> 
     <script src="scripts/music.js"></script>
 </body>
-
 </html>

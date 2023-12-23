@@ -18,3 +18,5 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Audio element or start button not found.");
     }
 });
+
+
