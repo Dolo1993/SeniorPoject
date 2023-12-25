@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUP Events</title>
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="styles/announcements_events.css">
+
+    <!-- links to external libraries-->
+    <!-- For example, Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">
+            <img src="images/logo.jpg" alt="SUP Logo">
+        </div> 
+        <div class="social-media">
+            <!-- social media links and icons -->
+            <a href="link-to-facebook" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="link-to-instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>   
+        </div>
+        <!-- Navigation -->
+        <nav>
+            <!-- Regular navigation for larger screens -->
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#forum">Forum</a></li> 
+                <li><a href="#member">Membership</a></li>
+                <li><a href="#about">About SUP</a></li> 
+                <li><a href="chair">SUP Chairs</a></li> 
+            </ul>
+
+            <!-- Dropdown select box for small screens -->
+            <select id="mobile-nav">
+                <option value="" selected disabled>Manu</option>
+                <option value="home">Home</option>
+                <option value="contact">Contact Us</option>
+                <option value="forum">Forum</option>
+                <option value="#member">Membership</option>
+                <option value="#about">About SUP</option>
+                <option value="#chairs">SUP Chairs</option>
+            </select>
+        </nav> 
+        <!-- <audio id="background-music" src="audios/rudeboy.mp3" autoplay loop></audio>  -->
+        <button id="startAudioButton">Start Audio</button>
+        
+
+        <!-- Hero Image -->
+        <div class="hero">
+            <img src="images/event_hero.jpg" alt="SUP Hero Image"> 
+            <h4>Vanguard Student Unification Party</h4>
+            <h1><span class="letter-S">s</span><span class="letter-U">u</span><span class="letter-P">p</span></h1>
+            <p>By The Masses, For The Masses, and Of The Masses</p>
+        </div>
+    </header>
+    <main>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <div id="events-container">
+                <div v-for="event in events" :key="event.id">
+                    <div>
+                        <img :src="event.image" alt="{{ event.title }} Image">
+                        <h3>{{ event.title }}</h3> 
+                        <p>Date: {{ event.date }}, Time: {{ event.time }}</p>
+                        <p>{{ event.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <!-- social media-->
+            <a href="link-to-facebook" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+            <a href="link-to-instagram" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>   
+        </div>
+        <p>&copy; 2023 Vanguard Student Unification Party</p>
+    </footer> 
+
+    <!-- Vue.js script -->
+    <script>
+       new Vue({
+    el: '#events-container',
+    data: {
+        events: [
+            {
+                id: 1,
+                title: 'Event 1',
+                date: '2023-12-31',
+                time: '12:00 PM',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                image: 'images/event1.jpg' 
+            },
+            {
+                id: 2,
+                title: 'Event 2',
+                date: '2024-01-15',
+                time: '2:30 PM',
+                description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
+                image: 'images/event2.jpg'  
+            }, 
+            // Add more events as needed
+        ]
+    }
+});
+
+    </script>
+</body>
+
+</html>
