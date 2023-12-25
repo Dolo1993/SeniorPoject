@@ -48,7 +48,7 @@
                 <option value="#chairs">SUP Chairs</option>
             </select>
         </nav> 
-        <!-- <audio id="background-music" src="audios/rudeboy.mp3" autoplay loop></audio>  -->
+        <audio id="background-music" src="audios/rudeboy.mp3" autoplay loop></audio> 
         <button id="startAudioButton">Start Audio</button>
         
 
@@ -63,9 +63,7 @@
     <main>
         <section id="announcements">
             <h2>Announcements</h2>
-            <!-- Add a dynamic section to display the latest announcements -->
             <div id="announcements-container">
-                <!-- Vue.js can be used to dynamically render announcements here -->
                 <div v-for="announcement in announcements" :key="announcement.id">
                     <div>
                         <h3>{{ announcement.title }}</h3>
@@ -103,7 +101,6 @@
                         content: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
                         date: '2023-12-15'
                     },
-                    // Add more announcements as needed
                 ]
             }
         });
