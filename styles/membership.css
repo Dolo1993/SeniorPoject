@@ -68,7 +68,7 @@ nav select {
 
 .hero h1 { 
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%; 
     transform: translate(-50%, -50%);
     color: #fff;
@@ -78,7 +78,7 @@ nav select {
 }  
 .hero h4{ 
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%; 
     transform: translate(-50%, -50%);
     color: #fff;
@@ -87,8 +87,7 @@ nav select {
     font-weight: bold;
 }
 
-
-/* styles for the color of SUP */
+/*the color of SUP */
 .hero h1 .letter-S {
     color: khaki;  
 }
@@ -105,127 +104,93 @@ nav select {
     background-color: khaki; 
     color: #000;
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%; 
     font-weight: bold; 
     font-family: 'Courier New', Courier, monospace;
     transform: translate(-50%, -50%);
-}  
-
-/* Announcements section */
-#announcements {
-    background-color: #f8f8f8;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  #announcements h2 {
-    color: #333;
-  }
-  
-  #announcements-container {
-    display: grid;
-    gap: 20px;
-    margin-top: 20px;
-  }
-  
-  #announcements-container div {
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #announcements-container h3 {
-    color: #333;
-  }
-  
-  #announcements-container p { 
-    color: #666;
-  } 
-
-
-  /* Event Section Styles */
-
-#events {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-    text-align: center;
 }
 
-#events h2 {
-    color: #333;
-    font-size: 1.5em;
-    margin-bottom: 30px;
+/* Form style*/
+main {
+    padding: 50px;
 }
 
-#events-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-#events-container div {
+form {
     background-color: #fff;
     border-radius: 15px;
-    overflow: hidden;
-    margin: 20px;
-    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    padding: 30px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-#events-container div:hover {
-    transform: translateY(-5px);
-}
-
-#events-container img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 2px solid #ddd;
-}
-
-#events-container div h3 {
+h3 {
+    text-align: center;   
+    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 10px;
     color: #333;
-    font-size: 1.8em;
-    margin: 15px;
 }
 
-#events-container div p {
-    color: #666;
-    padding: 0 15px 15px; 
+/* Sections within the form */
+section {
+    margin-bottom: 30px; 
+    
 }
 
-/* Overlay Effect */
-#events-container .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#events-container div:hover .overlay {
-    opacity: 1;
-}
-
-#events-container .overlay h3 {
-    margin-bottom: 10px;
-}
-
-#events-container .overlay p {
-    margin: 0;
+h2 {
+    color: #333;
+    font-size: 0.9em;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 15px;
 } 
-  
+#agreement p{
+    font-family: courier;
+}
+
+label {
+    display: block; 
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+} 
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #0F9D58;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+button:hover {
+    background-color: #08682E;
+}  
+#mobile-nav{  
+    float: left;
+    width: 25%; 
+}
+
 /* footer */
 footer {
     background-color: #333;
@@ -260,8 +225,8 @@ footer P{
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}  
- 
+}   
+
 /* responsive view */
 @media screen and (max-width: 768px) {
     #images-container {

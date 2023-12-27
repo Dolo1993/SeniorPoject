@@ -87,7 +87,7 @@ nav select {
     font-weight: bold;
 }
 
-/* styles for the color of SUP */
+/*the color of SUP */
 .hero h1 .letter-S {
     color: khaki;  
 }
@@ -246,7 +246,7 @@ h2 {
   
   .video-card iframe {
     width: 100%;
-    height: 180px; /* Adjust the height as needed */
+    height: 180px; 
     border: none;
     border-radius: 10px;
     transition: transform 0.3s ease;
@@ -265,9 +265,12 @@ h2 {
 /* footer */
 footer {
     background-color: #333;
-    color: #fff;
-    text-align: left; 
     padding: 40px 0;
+} 
+footer P{ 
+   color: #fff;
+   font-weight: bold; 
+   text-align: center;
 }
 /* social styles */
 .social-media a { 
@@ -293,8 +296,8 @@ footer {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-}  
- 
+}   
+
 /* responsive view */
 @media screen and (max-width: 768px) {
     #images-container {
