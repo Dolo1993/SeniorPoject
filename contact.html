@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUP Events</title>
+    <title>SUP</title>
+    <link rel="stylesheet" href="styles/membership_contact.css">
 
-    <!-- CSS stylesheets -->
-    <link rel="stylesheet" href="styles/announcements_events.css">
-
-    <!-- links to external libraries-->
-    <!-- For example, Vue.js CDN -->
+    <!--links to external libraries -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <!-- JavaScript files and Vue.js integration-->
+    <script src="path/to/my/vue.js"></script>
+    <script src="path/to/my/main.js"></script>
 </head>
 
 <body>
@@ -48,32 +49,81 @@
                 <option value="#chairs">SUP Chairs</option>
             </select>
         </nav> 
-        <audio id="background-music" src="audios/rudeboy.mp3" autoplay loop></audio> 
-        <button id="startAudioButton">Start Audio</button>
-        
-
         <!-- Hero Image -->
         <div class="hero">
-            <img src="images/event_hero.jpg" alt="SUP Hero Image"> 
+            <img src="images/hero-image.jpg" alt="SUP Hero Image"> 
             <h4>Vanguard Student Unification Party</h4>
             <h1><span class="letter-S">s</span><span class="letter-U">u</span><span class="letter-P">p</span></h1>
             <p>By The Masses, For The Masses, and Of The Masses</p>
         </div>
     </header>
-    <main>
-        <section id="events">
-            <h2>Upcoming Events</h2>
-            <div id="events-container">
-                <div v-for="event in events" :key="event.id">
-                    <div>
-                        <img :src="event.image" alt="{{ event.title }} Image">
-                        <h3>{{ event.title }}</h3> 
-                        <p>Date: {{ event.date }}, Time: {{ event.time }}</p>
-                        <p>{{ event.description }}</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main> 
+        <!-- sup leadership -->
+<section id="leadership">
+    <div class="sup-leadership">
+        <h2>SUP Leadership</h2>
+
+        <div class="leader">
+            <h3>Chairman</h3>
+            <p>Name: John Doe</p> 
+            <p>phone: +231xxxxxxx</p>
+            <p>Email: john.doe@example.com</p>
+        </div>
+
+        <div class="leader">
+            <h3>Co-Chairman</h3>
+            <p>Name: Jane Smith</p> 
+            <p>phone: +231xxxxxxx</p>
+            <p>Email: jane.smith@example.com</p>
+        </div>
+
+        <div class="leader">
+            <h3>Secretary General</h3>
+            <p>Name: Alex Johnson</p> 
+            <p>phone: +231xxxxxxx</p>
+            <p>Email: alex.johnson@example.com</p>
+        </div>
+
+        <div class="leader">
+            <h3>Militant Brigade</h3>
+            <p>Name: Mike Anderson</p> 
+            <p>phone: +231xxxxxxx</p>
+            <p>Email: mike.anderson@example.com</p>
+        </div>
+
+        <div class="leader">
+            <h3>Militant Chair</h3> 
+            <p>Name: Emily Davis</p> 
+            <p>phone: +231xxxxxxx</p>
+            <p>Email: emily.davis@example.com</p>
+        </div>
+
+        <div class="leader">
+            <h3>Women's Precendence Chair</h3>
+            <p>Name: Sarah Wilson</p> 
+            <p>phone: +231xxxxxxx</p>
+            <p>Email: sarah.wilson@example.com</p>
+        </div>
+    </div>
+</section> 
+<!-- contact area -->
+<section id="contact">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <form id="contact-form" action="path/to/your/contact/script" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
     </main>
     <footer>
         <div class="social-media">
@@ -85,35 +135,5 @@
         <p><a href="privacy-policy.html" target="_blank">Privacy Policy</a></p>
     </footer> 
     <script src="scripts/dropdown.js"></script> 
-    <script src="scripts/music.js"></script>
-
-    <!-- Vue.js script -->
-    <script>
-       new Vue({
-    el: '#events-container',
-    data: {
-        events: [
-            {
-                id: 1,
-                title: 'Event 1',
-                date: '2023-12-31',
-                time: '12:00 PM',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                image: 'images/event1.jpg' 
-            },
-            {
-                id: 2,
-                title: 'Event 2',
-                date: '2024-01-15',
-                time: '2:30 PM',
-                description: 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.',
-                image: 'images/event2.jpg'  
-            },  
-        ]
-    }
-});
-
-    </script>
 </body>
-
 </html>
