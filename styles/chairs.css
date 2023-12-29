@@ -57,9 +57,6 @@ p {
 @media screen and (max-width: 768px) {
     .cards {
         grid-template-columns: 1fr;  
-        margin-top: 300px; /* Adjust the margin as needed */
+        margin-top: 5600px; /* Adjust the margin as needed */
     }  
-     
-    
-    
 }
