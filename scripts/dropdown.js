@@ -27,3 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     checkVisibility();
 });
+// prevent right click
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});

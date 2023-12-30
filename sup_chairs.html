@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,9 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sup chairs</title> 
     <link rel="stylesheet" href="styles/chairs.css">  
+
+     
+
+    <script>
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+
+         
+        document.addEventListener('DOMContentLoaded', function () {
+            var imageContainers = document.querySelectorAll('.cards section');
+            
+            imageContainers.forEach(function (container) {
+                container.classList.add('image-container');
+                var overlay = document.createElement('div');
+                overlay.classList.add('image-overlay');
+                container.appendChild(overlay);
+            });
+        });
+    </script>
 </head>
 <body>  
-    <main>  
+    <main> 
         <div class="cards">
             <section>
                 <h2>Emmanuel Dolo</h2> 
