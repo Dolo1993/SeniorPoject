@@ -64,6 +64,9 @@ nav select {
     height: 400px; 
     filter: brightness(0.9);
     object-fit: cover;
+} 
+main h3{
+    font-size: 1.5em;
 }
 
 .hero h1 { 

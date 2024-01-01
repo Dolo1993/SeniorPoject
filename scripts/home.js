@@ -58,58 +58,43 @@ fetch(apiUrl)
 
 
 
-// Function to calculate the days until Christmas
+ // Function to calculate and display the days until Christmas
 function calculateDaysUntilChristmas() {
-    var currentDate = new Date();
-    var christmasDate = new Date(currentDate.getFullYear(), 11, 25); 
+    let today = new Date();
+    let christmas = new Date(today.getFullYear(), 11, 25);
 
-    // Check if Christmas has already passed this year
-    if (currentDate > christmasDate) {
-        christmasDate.setFullYear(currentDate.getFullYear() + 1); 
+    // check if it's the days of December after Christmas, if so, change to next year
+    if (today.getMonth() === 11 && today.getDate() > 25) {
+        christmas.setFullYear(christmas.getFullYear() + 1);
     }
 
-    // Calculate the time difference in milliseconds
-    var timeDifference = christmasDate - currentDate;
-
-    // Calculate days, hours, minutes, and seconds
-    var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    let daysleft = (christmas.getTime() - Date.now()) / 84600000;
 
     // Display the information
-    document.getElementById('lastVisited').textContent = getLastVisited(); 
-    document.getElementById('visits').textContent = getNumberOfVisits();
-    document.getElementById('daysleft').textContent = days;
+    document.getElementById('daysleft').innerHTML = `${daysleft.toFixed(0)} days`;
+
+    // Display the number of days since the last visit
+    document.getElementById('lastVisited').textContent = getLastVisited();
+
+    // Store the current visit date in local storage
+    localStorage.setItem('lastVisited', today);
 }
 
 // Function to get the last visited time from localStorage
 function getLastVisited() {
-    var lastVisitedTimestamp = localStorage.getItem('lastVisitedTimestamp');
-    if (lastVisitedTimestamp) {
-        var lastVisitedDate = new Date(parseInt(lastVisitedTimestamp));
-        var currentDate = new Date();
-        var timeDifference = currentDate - lastVisitedDate;
-        return Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+    const currentDate = new Date();
+    const lastVisited = localStorage.getItem('lastVisited');
+
+    if (lastVisited) {
+        // Calculate the number of days between the current date and the last visit date
+        const daysSinceLastVisit = Math.round((currentDate - new Date(lastVisited)) / (1000 * 60 * 60 * 24));
+        return `${daysSinceLastVisit} `;
     } else {
-        return 0; 
+        return "N/A"; 
     }
 }
 
-// Function to get the number of visits from localStorage
-function getNumberOfVisits() {
-    var visitCount = localStorage.getItem('visitCount');
-    if (visitCount) {
-        return parseInt(visitCount);
-    } else {
-        return 1; 
-    }
-}
-
-// Function to update the last visited time and visit count in localStorage
-function updateVisitInformation() {
-    var currentTimestamp = new Date().getTime();
-    localStorage.setItem('lastVisitedTimestamp', currentTimestamp);
-
-    var visitCount = getNumberOfVisits();
-    localStorage.setItem('visitCount', visitCount + 1);
-}
+// Call the function to initialize the page
 calculateDaysUntilChristmas();
-updateVisitInformation();
+
+

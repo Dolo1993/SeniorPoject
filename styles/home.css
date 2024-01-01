@@ -262,8 +262,6 @@ h2 {
 
 
  
-
-
 /* text section */ 
 #text h2{
     font-size: 1em; 
@@ -358,15 +356,11 @@ figure {
     color: black
 }
 #daysleft {
-    font-size: 24px;
+    font-size: 18px;
     color:rgb(40, 17, 243);
 } 
-#visits{
-    font-size: 24px;
-    color:green;
-} 
 #lastVisited{
-    font-size: 24px;
+    font-size: 18px;
     color:rgb(243, 153, 17);
 }
 /* rotating the weather icon */
@@ -384,10 +378,9 @@ figure {
 }
 
   
-  
 
- 
-/* footer */ 
+
+ /* footer */ 
 footer {
     background-color: #333;
     padding: 40px 0;
