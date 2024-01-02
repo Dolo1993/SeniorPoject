@@ -28,13 +28,11 @@ document.addEventListener("DOMContentLoaded", function() {
 }); 
 
 
-
-
-//to prevent right click
+// prevent right click
 document.addEventListener('contextmenu', function (e) {
     e.preventDefault();
-}); 
-
+});
+ 
 
 
 // to calculate the weather temperature in Liberia
@@ -57,9 +55,8 @@ fetch(apiUrl)
 
 
 
-
  // Function to calculate and display the days until Christmas
-function calculateDaysUntilChristmas() {
+ function calculateDaysUntilChristmas() {
     let today = new Date();
     let christmas = new Date(today.getFullYear(), 11, 25);
 
@@ -67,28 +64,28 @@ function calculateDaysUntilChristmas() {
     if (today.getMonth() === 11 && today.getDate() > 25) {
         christmas.setFullYear(christmas.getFullYear() + 1);
     }
-
-    let daysleft = (christmas.getTime() - Date.now()) / 84600000;
+    let daysLeft = (christmas.getTime() - Date.now()) / 84600000;
 
     // Display the information
-    document.getElementById('daysleft').innerHTML = `${daysleft.toFixed(0)} days`;
+    document.getElementById('daysleft').innerHTML = `${daysLeft.toFixed(0)} days`;
 
     // Display the number of days since the last visit
     document.getElementById('lastVisited').textContent = getLastVisited();
 
     // Store the current visit date in local storage
-    localStorage.setItem('lastVisited', today);
+    localStorage.setItem('lastVisited', today.toISOString());
 }
 
 // Function to get the last visited time from localStorage
 function getLastVisited() {
     const currentDate = new Date();
     const lastVisited = localStorage.getItem('lastVisited');
+    const lastVisitedDate = lastVisited ? new Date(lastVisited) : null;
 
-    if (lastVisited) {
+    if (lastVisitedDate) {
         // Calculate the number of days between the current date and the last visit date
-        const daysSinceLastVisit = Math.round((currentDate - new Date(lastVisited)) / (1000 * 60 * 60 * 24));
-        return `${daysSinceLastVisit} `;
+        const daysSinceLastVisit = Math.round((currentDate - lastVisitedDate) / (1000 * 60 * 60 * 24));
+        return `${daysSinceLastVisit} days`;
     } else {
         return "N/A"; 
     }
@@ -97,4 +94,24 @@ function getLastVisited() {
 // Call the function to initialize the page
 calculateDaysUntilChristmas();
 
+// Initialize display elements
+const todayDisplay = document.querySelector("#today");
+const visitsDisplay = document.querySelector("#visits");
+const daysLeftOutput = document.querySelector("#daysleft");
+
+// Get the stored value in localStorage
+let numVisits = Number(window.localStorage.getItem("visits-ls"));
+
+// Determine if this is the first visit or display the number of visits.
+if (numVisits !== 0) {
+    visitsDisplay.textContent = numVisits;
+} else {
+    visitsDisplay.textContent = `This is your first visit!`;
+}
+
+// Increment the number of visits.
+numVisits++;
+
+// Store the new number of visits value
+localStorage.setItem("visits-ls", numVisits);
 

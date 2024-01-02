@@ -9,7 +9,7 @@ body, h1, h2, h3, p, ul {
 /* body styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0e68ca1;
 } 
 .logo {
     float: left; 
@@ -134,7 +134,7 @@ nav select {
 
 
 
- /* main section styles */
+  /* main section styles */
 main {
     padding: 20px;
 }
@@ -149,6 +149,10 @@ main {
     flex: 0 0 calc(33.333% - 20px);
     margin-bottom: 20px;
     animation: pulse 2s infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 8px; 
+    
+    overflow: hidden;
 }
 
 @keyframes pulse {
@@ -178,10 +182,11 @@ main {
 .cards img {
     width: 100%;
     height: auto;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
-
-
+ 
 
 
 
@@ -217,6 +222,12 @@ footer P{
     .image-card {
         width: 100%;
         margin: 10px 0;
+    }
+} 
+/* Responsive styles for small screens */
+@media (max-width: 767px) {
+    .cards section {
+        flex: 0 0 calc(50% - 20px); 
     }
 } 
  
