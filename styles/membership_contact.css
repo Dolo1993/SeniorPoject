@@ -193,18 +193,21 @@ button:hover {
     float: left;
     width: 30%; 
 } 
-
-/* Sup Leadership Section */
+ /* Sup Leadership Section */
 #leadership {
     background-color: rgb(240, 230, 140);
     color: #fff;
     padding: 50px 0;
 }
 
-.sup-leadership{
+.sup-leadership {
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust the column width as needed */
+    gap: 20px;
+    justify-content: center;
 }
 
 .leader {
@@ -212,17 +215,16 @@ button:hover {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin: 0 20px 20px;
     padding: 20px;
     position: relative;
     opacity: 0;
-    transform: translateY(20px); 
+    transform: translateY(20px);
     transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
 }
 
 .leader.show {
     opacity: 1;
-    transform: translateY(0); 
+    transform: translateY(0);
 }
 
 .front,
@@ -248,7 +250,7 @@ button:hover {
 }
 
 .leader h3 {
-    color: #3498db; 
+    color: #3498db;
     font-size: 1.8em;
     margin-bottom: 10px;
 }
@@ -257,14 +259,20 @@ p {
     color: #555;
     font-size: 1.1em;
     margin: 5px 0;
-} 
-.sup-leadership h2{
-    font-size: 1.5em;
-} 
-.contact-container h2{ 
+}
+
+/* Chairman and Co-Chairman */
+.leader.half-width {
+    grid-column: span 2;
+}
+
+ 
+
+.contact-container h2 {
     text-align: center;
     font-size: 1.5em;
 }
+
 
 
 /* footer */
