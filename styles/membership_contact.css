@@ -190,8 +190,8 @@ button:hover {
     background-color: #08682E;
 }  
 #mobile-nav{  
-    float: left;
-    width: 30%; 
+    /* float: left; */
+    width: 40%; 
 } 
  /* Sup Leadership Section */
 #leadership {

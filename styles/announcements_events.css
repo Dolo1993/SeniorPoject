@@ -67,7 +67,7 @@ nav select {
 
 .hero h1 { 
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%; 
     transform: translate(-50%, -50%);
     color: #fff;
@@ -77,7 +77,7 @@ nav select {
 }  
 .hero h4{ 
     position: absolute;
-    top: 10%;
+    top: 20%;
     left: 50%; 
     transform: translate(-50%, -50%);
     color: #fff;
@@ -207,7 +207,7 @@ footer P{
 /* Responsive styles for small screens */
 @media (max-width: 768px) {
     #events-container div {
-        flex: 0 0 100%; 
+        flex: 0 0 90%; 
         margin: 10px 0; 
     }
 }
